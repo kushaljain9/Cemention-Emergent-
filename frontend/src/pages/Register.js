@@ -127,21 +127,21 @@ const Register = () => {
                   <RadioGroupItem value="dealer" id="dealer" />
                   <Label htmlFor="dealer" className="flex-1 cursor-pointer">
                     <div className="font-chivo font-bold text-slate-900 uppercase">Dealer</div>
-                    <div className="font-manrope text-sm text-slate-600">Best price: ₹300 per bag</div>
+                    <div className="font-manrope text-sm text-slate-600">Wholesale bulk cement dealer</div>
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2 border-2 border-slate-200 p-4 rounded-sm hover:border-blue-500 transition-colors" data-testid="role-retailer">
                   <RadioGroupItem value="retailer" id="retailer" />
                   <Label htmlFor="retailer" className="flex-1 cursor-pointer">
                     <div className="font-chivo font-bold text-slate-900 uppercase">Retailer</div>
-                    <div className="font-manrope text-sm text-slate-600">Price: ₹305 per bag</div>
+                    <div className="font-manrope text-sm text-slate-600">Retail cement distributor</div>
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2 border-2 border-slate-200 p-4 rounded-sm hover:border-green-500 transition-colors" data-testid="role-customer">
                   <RadioGroupItem value="customer" id="customer" />
                   <Label htmlFor="customer" className="flex-1 cursor-pointer">
                     <div className="font-chivo font-bold text-slate-900 uppercase">Customer</div>
-                    <div className="font-manrope text-sm text-slate-600">Builder, Contractor, Engineer, Others - Price: ₹307.5 per bag</div>
+                    <div className="font-manrope text-sm text-slate-600">Builder, Contractor, Engineer, Others</div>
                   </Label>
                 </div>
               </RadioGroup>
