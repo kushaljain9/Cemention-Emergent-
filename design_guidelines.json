@@ -1,0 +1,137 @@
+{
+  "identity": {
+    "name": "Cemention",
+    "archetype": "Industrial Swiss",
+    "vibe": "Solid, Reliable, Efficient, Engineered",
+    "core_values": ["Trust", "Bulk Efficiency", "Construction Authority"]
+  },
+  "typography": {
+    "primary_font": "Manrope",
+    "secondary_font": "Chivo",
+    "font_installation": "import '@fontsource/chivo'; import '@fontsource/manrope';",
+    "usage": {
+      "headings": "font-chivo font-bold tracking-tight uppercase text-slate-900",
+      "body": "font-manrope text-slate-600 leading-relaxed",
+      "ui_elements": "font-manrope font-medium tracking-wide",
+      "numbers": "font-chivo font-bold tabular-nums"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "name": "Industrial Slate",
+        "hex": "#0F172A",
+        "tailwind": "bg-slate-900 text-white"
+      },
+      "secondary": {
+        "name": "Safety Orange",
+        "hex": "#F97316",
+        "tailwind": "bg-orange-500 text-white hover:bg-orange-600"
+      },
+      "background": {
+        "light": "#FFFFFF",
+        "subtle": "#F8FAFC",
+        "dark": "#020617"
+      },
+      "text": {
+        "main": "#0F172A",
+        "muted": "#64748B",
+        "inverted": "#FFFFFF"
+      },
+      "status": {
+        "success": "#16A34A",
+        "warning": "#EAB308",
+        "error": "#DC2626"
+      }
+    },
+    "role_colors": {
+      "dealer": "bg-purple-100 text-purple-800 border-purple-200",
+      "retailer": "bg-blue-100 text-blue-800 border-blue-200",
+      "customer": "bg-green-100 text-green-800 border-green-200"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "border-2 border-slate-200 rounded-sm",
+    "shadows": "shadow-none",
+    "textures": "bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')] opacity-50",
+    "glassmorphism": "bg-white/90 backdrop-blur-md border-b border-slate-200"
+  },
+  "layout_strategies": {
+    "marketing": {
+      "grid": "grid grid-cols-1 md:grid-cols-12 gap-0",
+      "spacing": "p-8 md:p-16 lg:p-24",
+      "container": "max-w-7xl mx-auto"
+    },
+    "dashboard": {
+      "grid": "grid grid-cols-1 md:grid-cols-4 gap-6",
+      "card_style": "bg-white border border-slate-200 p-6 rounded-sm"
+    }
+  },
+  "image_urls": {
+    "hero_section": {
+      "url": "https://images.unsplash.com/photo-1694522362256-6c907336af43",
+      "alt": "Construction Engineer with Helmet",
+      "usage": "Main hero background with dark overlay"
+    },
+    "features_section": {
+      "url": "https://images.unsplash.com/photo-1718117075248-3d3c3cd65264",
+      "alt": "Warehouse Cement Stacks",
+      "usage": "Bulk order feature card background"
+    },
+    "login_page": {
+      "url": "https://images.unsplash.com/photo-1610018924075-558aa6b0d7a9",
+      "alt": "Concrete Architecture Texture",
+      "usage": "Split screen side image for login/signup"
+    },
+    "placeholders": {
+      "product": "https://images.unsplash.com/photo-1593812742588-92d10d2f2e1c",
+      "avatar": "https://ui.shadcn.com/avatars/01.png"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 rounded-sm px-8 py-3 font-bold uppercase tracking-wider transition-all active:scale-95",
+      "accent": "bg-orange-500 text-white hover:bg-orange-600 rounded-sm px-8 py-3 font-bold uppercase tracking-wider shadow-lg shadow-orange-500/20",
+      "outline": "border-2 border-slate-900 text-slate-900 hover:bg-slate-50 rounded-sm px-8 py-3 font-bold uppercase"
+    },
+    "cards": {
+      "product": "group relative bg-white border border-slate-200 hover:border-orange-500 transition-colors duration-300 p-4",
+      "feature": "bg-slate-50 p-8 border-l-4 border-orange-500"
+    },
+    "inputs": {
+      "default": "h-12 rounded-sm border-2 border-slate-200 focus:border-slate-900 focus:ring-0 bg-white"
+    },
+    "badges": {
+      "role": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border"
+    }
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-out",
+    "page_load": "animate-in fade-in slide-in-from-bottom-4 duration-700",
+    "micro_interactions": "active:scale-95"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Run 'npm install @fontsource/chivo @fontsource/manrope' immediately.",
+    "2. SETUP TAILWIND: Update tailwind.config.js to include the custom colors (slate-900 as primary, orange-500 as accent).",
+    "3. CREATE LAYOUTS: Use the 'Bento' grid strategy for the landing page. Do not use simple rows.",
+    "4. ROLE PRICING: Implement the pricing logic visually. Show the 'Retailer Price' vs 'Dealer Price' clearly using the badge colors defined.",
+    "5. CHATBOT: Create a fixed widget at bottom-right. Style it like a 'Field Communicator' (dark slate bg, green status light).",
+    "6. IMAGES: Use the provided Unsplash URLs. Do not use placeholders.",
+    "7. DATA-TESTID: Add data-testid to every button, input, and link (e.g., 'login-submit-btn', 'role-selector-dealer').",
+    "8. NO TYPESCRIPT: The project uses .js files. Do not add types.",
+    "9. ADMIN PANEL: Keep it high-density. Use tables with small padding (p-2) to fit more data."
+  ],
+  "universal_guidelines": {
+    "do_not": [
+      "Do not use gradients for backgrounds (use solid or noise).",
+      "Do not use rounded-full buttons (use rounded-sm).",
+      "Do not use 'Inter' font.",
+      "Do not center text on the landing page (left align for strong industrial feel)."
+    ],
+    "must_do": [
+      "Use 'Chivo' for all headings.",
+      "Ensure 100 bag minimum validation is visible in red text.",
+      "Make the 'Call to Order' button sticky on mobile."
+    ]
+  }
+}
