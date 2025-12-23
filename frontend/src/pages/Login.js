@@ -22,7 +22,11 @@ const Login = () => {
       toast.success('Login successful!');
       navigate('/products');
     } catch (error) {
-      toast.error(error.response?.data?.detail || 'Login failed');
+      const errorDetail = error.response?.data?.detail;
+      const errorMessage = Array.isArray(errorDetail) 
+        ? errorDetail.map(err => err.msg).join(', ')
+        : (typeof errorDetail === 'string' ? errorDetail : 'Login failed');
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
