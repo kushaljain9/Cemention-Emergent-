@@ -32,7 +32,11 @@ const Register = () => {
       toast.success('Registration successful!');
       navigate('/products');
     } catch (error) {
-      toast.error(error.response?.data?.detail || 'Registration failed');
+      const errorDetail = error.response?.data?.detail;
+      const errorMessage = Array.isArray(errorDetail) 
+        ? errorDetail.map(err => err.msg).join(', ')
+        : (typeof errorDetail === 'string' ? errorDetail : 'Registration failed');
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
