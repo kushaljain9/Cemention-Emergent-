@@ -52,8 +52,12 @@ const Checkout = () => {
   };
 
   const calculateTotal = () => {
-    if (!cart || !cart.items) return 0;
-    return cart.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+    if (!cart || !cart.items) return { subtotal: 0, gst: 0, cardSurcharge: 0, total: 0 };
+    const subtotal = cart.items.reduce((total, item) => total + (item.price * item.quantity), 0);
+    const gst = user.isGstRegistered ? subtotal * 0.18 : 0;
+    const cardSurcharge = paymentMethod === 'card' ? subtotal * 0.02 : 0;
+    const total = subtotal + gst + cardSurcharge;
+    return { subtotal, gst, cardSurcharge, total };
   };
 
   const handleSubmit = async (e) => {
