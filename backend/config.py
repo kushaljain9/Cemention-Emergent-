@@ -15,7 +15,7 @@ COMPANY_CONFIG = {
     'bank_holder': 'Cemention',
     'instagram': 'https://www.instagram.com/cementioncom',
     'linkedin': 'https://www.linkedin.com/in/kushal-jain-b52008396',
-    'logo_url': 'https://customer-assets.emergentagent.com/job_role-price/artifacts/f5hcjuvn_ChatGPT%20Image%20Dec%2020%2C%202025%2C%2012_27_22%20PM.png'
+    'logo_url': 'https://customer-assets.emergentagent.com/job_role-price/artifacts/o67p0lnz_ChatGPT%20Image%20Dec%2020%2C%202025%2C%2012_27_22%20PM.png'
 }
 
 # Pricing Configuration
