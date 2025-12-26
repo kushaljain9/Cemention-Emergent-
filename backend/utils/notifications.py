@@ -134,9 +134,9 @@ Order ID: {order_id}
 Customer: {customer_name}
 
 *DRIVER DETAILS:*
-*NAME: {order_data.get('driverName', 'TBD').upper()}*
-*MOBILE: {order_data.get('driverMobile', 'TBD')}*
-*VEHICLE: {order_data.get('vehicleNumber', 'TBD')}*
+*NAME: {(order_data.get('driverName') or 'TBD').upper()}*
+*MOBILE: {order_data.get('driverMobile') or 'TBD'}*
+*VEHICLE: {order_data.get('vehicleNumber') or 'TBD'}*
 
 Your order will be delivered soon.
 
@@ -151,8 +151,8 @@ Customer: {customer_name}
 
 Your order is on the way!
 
-*DRIVER: {order_data.get('driverName', 'TBD').upper()}*
-*MOBILE: {order_data.get('driverMobile', 'TBD')}*
+*DRIVER: {(order_data.get('driverName') or 'TBD').upper()}*
+*MOBILE: {order_data.get('driverMobile') or 'TBD'}*
 
 Please be available at the delivery address.
 
