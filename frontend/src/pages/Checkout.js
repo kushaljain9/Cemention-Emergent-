@@ -221,10 +221,26 @@ const Checkout = () => {
                     );
                   })}
                 </div>
-                <div className="border-t-2 border-slate-200 pt-4">
-                  <div className="flex justify-between font-chivo text-xl">
+                <div className="border-t-2 border-slate-200 pt-4 space-y-2">
+                  <div className="flex justify-between font-manrope">
+                    <span className="text-slate-600">Subtotal:</span>
+                    <span className="text-slate-900 font-medium">₹{calculateTotal().subtotal.toFixed(2)}</span>
+                  </div>
+                  {user.isGstRegistered && (
+                    <div className="flex justify-between font-manrope">
+                      <span className="text-slate-600">GST (18%):</span>
+                      <span className="text-slate-900 font-medium">₹{calculateTotal().gst.toFixed(2)}</span>
+                    </div>
+                  )}
+                  {paymentMethod === 'card' && (
+                    <div className="flex justify-between font-manrope">
+                      <span className="text-red-600">Card Surcharge (2%):</span>
+                      <span className="text-red-600 font-medium">₹{calculateTotal().cardSurcharge.toFixed(2)}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between font-chivo text-xl border-t-2 border-slate-900 pt-3 mt-2">
                     <span className="font-bold text-slate-900">Total:</span>
-                    <span className="font-bold text-slate-900">₹{calculateTotal().toFixed(2)}</span>
+                    <span className="font-bold text-slate-900">₹{calculateTotal().total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>
