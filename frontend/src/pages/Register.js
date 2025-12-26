@@ -129,6 +129,67 @@ const Register = () => {
             </div>
 
             <div>
+              <Label htmlFor="businessName" className="font-manrope font-medium">Business Name (Optional)</Label>
+              <Input
+                id="businessName"
+                name="businessName"
+                type="text"
+                value={formData.businessName}
+                onChange={handleChange}
+                className="h-12 rounded-sm border-2 border-slate-200 focus:border-slate-900 focus:ring-0 bg-white mt-2"
+                data-testid="register-business-input"
+              />
+            </div>
+
+            <div>
+              <div className="flex items-center space-x-2 mb-3">
+                <input
+                  type="checkbox"
+                  id="isGstRegistered"
+                  checked={formData.isGstRegistered}
+                  onChange={(e) => setFormData({ ...formData, isGstRegistered: e.target.checked })}
+                  className="h-4 w-4 rounded border-slate-300"
+                  data-testid="gst-checkbox"
+                />
+                <Label htmlFor="isGstRegistered" className="font-manrope font-medium cursor-pointer">
+                  GST Registered
+                </Label>
+              </div>
+
+              {formData.isGstRegistered && (
+                <div className="space-y-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+                  <div>
+                    <Label htmlFor="gstNumber" className="font-manrope font-medium">GST Number</Label>
+                    <Input
+                      id="gstNumber"
+                      name="gstNumber"
+                      type="text"
+                      placeholder="27ABCDE1234F1Z5"
+                      value={formData.gstNumber}
+                      onChange={handleChange}
+                      required={formData.isGstRegistered}
+                      className="h-12 rounded-sm border-2 border-slate-200 focus:border-slate-900 focus:ring-0 bg-white mt-2"
+                      data-testid="gst-number-input"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="gstRegisteredName" className="font-manrope font-medium">GST Registered Name</Label>
+                    <Input
+                      id="gstRegisteredName"
+                      name="gstRegisteredName"
+                      type="text"
+                      value={formData.gstRegisteredName}
+                      onChange={handleChange}
+                      required={formData.isGstRegistered}
+                      className="h-12 rounded-sm border-2 border-slate-200 focus:border-slate-900 focus:ring-0 bg-white mt-2"
+                      data-testid="gst-name-input"
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div>
               <Label className="font-manrope font-medium mb-4 block">Select Your Role</Label>
               <RadioGroup value={formData.role} onValueChange={(value) => setFormData({ ...formData, role: value })} data-testid="role-selector">
                 <div className="flex items-center space-x-2 border-2 border-slate-200 p-4 rounded-sm hover:border-purple-500 transition-colors" data-testid="role-dealer">
