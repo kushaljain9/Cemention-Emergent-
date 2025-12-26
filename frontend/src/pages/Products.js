@@ -49,7 +49,9 @@ const Products = () => {
       await cartAPI.add({
         productId: product.id,
         quantity: 100,
-        price: price
+        price: price,
+        brand: product.brand,
+        grade: product.grade
       });
       toast.success('Added to cart!');
     } catch (error) {
