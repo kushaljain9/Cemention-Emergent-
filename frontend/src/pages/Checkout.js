@@ -158,26 +158,49 @@ const Checkout = () => {
                   <RadioGroupItem value="upi" id="upi" />
                   <Label htmlFor="upi" className="flex-1 cursor-pointer">
                     <div className="font-chivo font-bold text-slate-900 uppercase">UPI</div>
-                    <div className="font-manrope text-sm text-slate-600">Pay using UPI apps</div>
+                    <div className="font-manrope text-sm text-slate-600">Pay to: 9823064024@ybl (PhonePe)</div>
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2 border-2 border-slate-200 p-4 rounded-sm hover:border-slate-900 transition-colors" data-testid="payment-netbanking">
                   <RadioGroupItem value="netbanking" id="netbanking" />
                   <Label htmlFor="netbanking" className="flex-1 cursor-pointer">
-                    <div className="font-chivo font-bold text-slate-900 uppercase">Net Banking</div>
-                    <div className="font-manrope text-sm text-slate-600">Pay using your bank account</div>
+                    <div className="font-chivo font-bold text-slate-900 uppercase">Net Banking / RTGS</div>
+                    <div className="font-manrope text-sm text-slate-600">
+                      A/C: 1676200100003406 | IFSC: PUNB0167620<br/>
+                      Punjab National Bank
+                    </div>
                   </Label>
                 </div>
-                <div className="flex items-center space-x-2 border-2 border-slate-200 p-4 rounded-sm hover:border-slate-900 transition-colors" data-testid="payment-rtgs">
-                  <RadioGroupItem value="rtgs" id="rtgs" />
-                  <Label htmlFor="rtgs" className="flex-1 cursor-pointer">
-                    <div className="font-chivo font-bold text-slate-900 uppercase">RTGS/Bank Transfer</div>
-                    <div className="font-manrope text-sm text-slate-600">Account: 1234567890, IFSC: ABCD0001234</div>
+                <div className="flex items-center space-x-2 border-2 border-slate-200 p-4 rounded-sm hover:border-slate-900 transition-colors" data-testid="payment-card">
+                  <RadioGroupItem value="card" id="card" />
+                  <Label htmlFor="card" className="flex-1 cursor-pointer">
+                    <div className="font-chivo font-bold text-slate-900 uppercase">Card Payment</div>
+                    <div className="font-manrope text-sm text-red-600 font-medium">2% surcharge applicable</div>
                   </Label>
                 </div>
               </RadioGroup>
+
+              {(paymentMethod === 'upi' || paymentMethod === 'netbanking' || paymentMethod === 'card') && (
+                <div className="mt-4">
+                  <Label htmlFor="transactionId" className="font-manrope font-medium">
+                    Transaction ID / Reference Number {paymentMethod !== 'card' ? '(Optional)' : ''}
+                  </Label>
+                  <Input
+                    id="transactionId"
+                    value={transactionId}
+                    onChange={(e) => setTransactionId(e.target.value)}
+                    placeholder="Enter transaction ID after payment"
+                    className="h-12 rounded-sm border-2 border-slate-200 focus:border-slate-900 focus:ring-0 bg-white mt-2"
+                    data-testid="transaction-id-input"
+                  />
+                  <p className="font-manrope text-xs text-slate-500 mt-2">
+                    You can also provide this later for verification
+                  </p>
+                </div>
+              )}
+
               <p className="font-manrope text-sm text-slate-600 mt-4 p-4 bg-slate-50 border-l-4 border-orange-500">
-                Final invoice will be generated after order confirmation
+                Final invoice will be generated after payment verification
               </p>
             </div>
           </div>
