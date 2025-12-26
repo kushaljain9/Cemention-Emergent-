@@ -1,5 +1,5 @@
 import React from 'react';
-import { Package, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,7 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <Package className="h-8 w-8" />
+              <img 
+                src="https://customer-assets.emergentagent.com/job_role-price/artifacts/o67p0lnz_ChatGPT%20Image%20Dec%2020%2C%202025%2C%2012_27_22%20PM.png" 
+                alt="Cemention Logo" 
+                className="h-10 w-auto brightness-0 invert"
+              />
               <span className="font-chivo font-bold text-2xl uppercase tracking-tight">Cemention</span>
             </div>
             <p className="font-manrope text-slate-300 leading-relaxed">
@@ -20,20 +24,29 @@ const Footer = () => {
             <div className="space-y-2 font-manrope text-slate-300">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span>+91 1234567890</span>
+                <span>+91 9823064024</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>sales@cemention.com</span>
+                <span>cemention@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4" />
-                <span>Mumbai, India</span>
+                <span>Jalgaon, Maharashtra</span>
               </div>
             </div>
           </div>
           <div>
-            <h3 className="font-chivo font-bold text-lg uppercase mb-4">Business Hours</h3>
+            <h3 className="font-chivo font-bold text-lg uppercase mb-4">Follow Us</h3>
+            <div className="space-y-2 font-manrope text-slate-300">
+              <a href="https://www.instagram.com/cementioncom" target="_blank" rel="noopener noreferrer" className="block hover:text-orange-500">
+                Instagram: @cementioncom
+              </a>
+              <a href="https://www.linkedin.com/in/kushal-jain-b52008396" target="_blank" rel="noopener noreferrer" className="block hover:text-orange-500">
+                LinkedIn: Kushal Jain
+              </a>
+            </div>
+            <h3 className="font-chivo font-bold text-lg uppercase mb-4 mt-6">Business Hours</h3>
             <div className="space-y-2 font-manrope text-slate-300">
               <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
               <p>Sunday: Closed</p>
