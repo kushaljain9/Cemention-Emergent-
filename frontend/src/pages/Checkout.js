@@ -67,10 +67,10 @@ const Checkout = () => {
     try {
       await ordersAPI.create({
         items: cart.items,
-        totalAmount: calculateTotal(),
         paymentMethod,
         deliveryAddress,
-        orderType: 'normal'
+        orderType: 'normal',
+        transactionId: transactionId || null
       });
       toast.success('Order placed successfully!');
       navigate('/profile');
