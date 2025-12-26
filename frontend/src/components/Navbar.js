@@ -33,7 +33,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2" data-testid="nav-logo">
-            <Package className="h-8 w-8 text-slate-900" />
+            <img 
+              src="https://customer-assets.emergentagent.com/job_role-price/artifacts/o67p0lnz_ChatGPT%20Image%20Dec%2020%2C%202025%2C%2012_27_22%20PM.png" 
+              alt="Cemention Logo" 
+              className="h-10 w-auto"
+            />
             <span className="font-chivo font-bold text-2xl text-slate-900 uppercase tracking-tight">Cemention</span>
           </Link>
 
