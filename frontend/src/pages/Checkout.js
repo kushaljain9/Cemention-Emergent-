@@ -12,6 +12,7 @@ const Checkout = () => {
   const [cart, setCart] = useState(null);
   const [products, setProducts] = useState([]);
   const [paymentMethod, setPaymentMethod] = useState('cod');
+  const [transactionId, setTransactionId] = useState('');
   const [deliveryAddress, setDeliveryAddress] = useState({
     street: '',
     city: '',
