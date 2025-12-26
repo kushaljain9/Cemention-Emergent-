@@ -13,7 +13,11 @@ const Register = () => {
     email: '',
     password: '',
     phone: '',
-    role: 'customer'
+    role: 'customer',
+    businessName: '',
+    isGstRegistered: false,
+    gstNumber: '',
+    gstRegisteredName: ''
   });
   const [loading, setLoading] = useState(false);
   const { register } = useAuth();
