@@ -32,7 +32,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      await register(formData.name, formData.email, formData.password, formData.phone, formData.role);
+      await register(formData.name, formData.email, formData.password, formData.phone, formData.role, formData.businessName, formData.isGstRegistered, formData.gstNumber, formData.gstRegisteredName);
       toast.success('Registration successful!');
       navigate('/products');
     } catch (error) {
