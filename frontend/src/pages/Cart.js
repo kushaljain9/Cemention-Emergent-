@@ -53,7 +53,9 @@ const Cart = () => {
       await cartAPI.add({
         productId: item.productId,
         quantity: newQuantity,
-        price: price
+        price: price,
+        brand: product.brand,
+        grade: product.grade
       });
       fetchData();
     } catch (error) {
