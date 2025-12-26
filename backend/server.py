@@ -96,8 +96,8 @@ class CartItem(BaseModel):
     productId: str
     quantity: int
     price: float
-    brand: str
-    grade: str
+    brand: Optional[str] = None
+    grade: Optional[str] = None
 
 class Cart(BaseModel):
     model_config = ConfigDict(extra="ignore")
@@ -112,7 +112,7 @@ class Order(BaseModel):
     userId: str
     items: List[CartItem]
     totalAmount: float
-    subtotal: float
+    subtotal: Optional[float] = None
     gstAmount: float = 0
     cardSurcharge: float = 0
     paymentMethod: str
